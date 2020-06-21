@@ -110,7 +110,7 @@ myCodeMirror = CodeMirror(document.getElementById("editor"), {
   mode: "javascript",
 });
 
-myCodeMirror.setSize("100%", "350px");
+myCodeMirror.setSize("100%", "500px");
 
 let input = document.getElementById("select");
 
