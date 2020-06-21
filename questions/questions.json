@@ -1,0 +1,39 @@
+{
+    "warmup": [{
+            "id": 1,
+            "problem": "Write a function called \"addFive\".\nGiven a number, \"addFive\" returns 5 added to that number.",
+            "template": "function addFive(num) {\n  ///Your code Starts here \n\n\n\n\n\n///Your code Ends here\n}\nconsole.log(addFive(5));\nconsole.log(addFive(0));\nconsole.log(addFive(-5));",
+            "output": [10, 5, 0],
+            "solved": false
+        },
+        {
+            "id": 2,
+            "problem": "Write a function called \"getOpposite\".\nGiven a number, return its opposite",
+            "template": "function getOpposite(num) {\n  ///Your code Starts here \n\n\n\n\n\n///Your code Ends here\n}\n\nconsole.log(getOpposite());\nconsole.log(getOpposite(5));\nconsole.log(getOpposite(0));\nconsole.log(getOpposite(-5));\nconsole.log(getOpposite(\"5a\"));\nconsole.log(getOpposite(5.5));",
+            "output": [-5, 0, 5, -1, -1],
+            "solved": false
+        },
+        {
+            "id": 3,
+            "problem": "Fill in your code that takes an number minutes and converts it to seconds.",
+            "template": "function toSeconds(min) {\n  ///Your code Starts here \n\n\n\n\n\n///Your code Ends here\n}\n\nconsole.log(toSeconds(5) );\nconsole.log(toSeconds(3) );\nconsole.log(toSeconds(2) );\n",
+            "output": [300, 180, 120],
+            "solved": false
+        },
+        {
+            "id": 4,
+            "problem": "Create a function that takes a string and returns it as an integer.",
+            "template": "function toInteger(mystr) {\n  ///Your code Starts here \n\n\n\n\n\n///Your code Ends here\n}\n\nconsole.log(toInteger(\"6\"));\nconsole.log(toInteger(\"1000\"));\nconsole.log(toInteger(\"12\"));",
+            "output": [6, 1000, 12],
+            "solved": false
+        },
+        {
+            "id": 5,
+            "problem": "Create a function that takes a number as an argument, increments the number by +1 and returns the result.",
+            "template": "function nextNumber(myint) {\n  ///Your code Starts here \n\n\n\n\n\n///Your code Ends here\n}\n\nconsole.log(nextNumber(0));\nconsole.log(nextNumber(9));\nconsole.log(nextNumber(-3));",
+            "output": [1, 10, -2],
+            "solved": false
+        }
+    ],
+    "dummy" : []
+}

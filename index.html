@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel=stylesheet href="codemirror/doc/docs.css">
+  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zen</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand"><img src="https://www.guvi.in/images/guvi-logo.png" alt="guvi"></a>
+
+    <div class="dropdown">
+      <select name="topics" id="topics" class="dropdown" onchange="setTopic(this.value)">
+        <option value="">Topics</option>
+      </select>
+    </div>
+  </nav>
+  <div class="container" id="mainDiv">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="info">
+          <h2>Problem Statement:</h2>
+          <div id="question"></div>
+        </div>
+        <div class="info">
+          <h2>Expected Outputs:</h2>
+          <div id="testcase" class="d-flex flex-column bd-highlight mb-3"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex justify-content-between driverButton">
+          <button class="btn btn-outline-success" onclick="prevPage()" type="button">Previous</button>
+          <button class="btn btn-outline-primary" onclick = "runMyCode()" type="button">Run Code</button>
+          <button class="btn btn-outline-success" onclick="nextPage()" type="button">Next</button>
+        </div>
+        <p>Select a theme: <select onchange="selectTheme()" id=select>
+            <option selected>default</option>
+            <option>3024-day</option>
+            <option>3024-night</option>
+            <option>abcdef</option>
+            <option>ambiance</option>
+            <option>ayu-dark</option>
+            <option>ayu-mirage</option>
+            <option>base16-dark</option>
+            <option>base16-light</option>
+            <option>bespin</option>
+            <option>blackboard</option>
+            <option>cobalt</option>
+            <option>colorforth</option>
+            <option>darcula</option>
+            <option>dracula</option>
+            <option>duotone-dark</option>
+            <option>duotone-light</option>
+            <option>eclipse</option>
+            <option>elegant</option>
+            <option>erlang-dark</option>
+            <option>gruvbox-dark</option>
+            <option>hopscotch</option>
+            <option>icecoder</option>
+            <option>idea</option>
+            <option>isotope</option>
+            <option>lesser-dark</option>
+            <option>liquibyte</option>
+            <option>lucario</option>
+            <option>material</option>
+            <option>material-darker</option>
+            <option>material-palenight</option>
+            <option>material-ocean</option>
+            <option>mbo</option>
+            <option>mdn-like</option>
+            <option>midnight</option>
+            <option>monokai</option>
+            <option>moxer</option>
+            <option>neat</option>
+            <option>neo</option>
+            <option>night</option>
+            <option>nord</option>
+            <option>oceanic-next</option>
+            <option>panda-syntax</option>
+            <option>paraiso-dark</option>
+            <option>paraiso-light</option>
+            <option>pastel-on-dark</option>
+            <option>railscasts</option>
+            <option>rubyblue</option>
+            <option>seti</option>
+            <option>shadowfox</option>
+            <option>solarized dark</option>
+            <option>solarized light</option>
+            <option>the-matrix</option>
+            <option>tomorrow-night-bright</option>
+            <option>tomorrow-night-eighties</option>
+            <option>ttcn</option>
+            <option>twilight</option>
+            <option>vibrant-ink</option>
+            <option>xq-dark</option>
+            <option>xq-light</option>
+            <option>yeti</option>
+            <option>yonce</option>
+            <option>zenburn</option>
+          </select>
+        </p>
+        <div name="myEditor" id="editor"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="codemirror/lib/codemirror.js"></script>
+  <script src="codemirror/mode/javascript/javascript.js"></script>
+  <script src="./main.js"></script>
+  <div id="runScript"></div>
+</body>
+
+</html>

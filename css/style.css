@@ -1,0 +1,29 @@
+#edior {
+    border: 4px solid black;
+    padding: 10px;
+}
+
+.pass {
+    background-color: green;
+    padding: 10px;
+    margin: 10px;
+}
+
+.fail {
+    background-color: red;
+    padding: 10px;
+    margin: 10px;
+}
+
+.driverButton{
+    padding: 10px;
+    margin: auto;
+}
+
+.info {
+    display: none;
+}
+.CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+  }
