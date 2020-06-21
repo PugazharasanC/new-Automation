@@ -47,30 +47,6 @@
             ></div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="d-flex justify-content-between driverButton">
-            <button
-              class="btn btn-outline-success"
-              onclick="prevPage()"
-              type="button"
-            >
-              Previous
-            </button>
-            <button
-              class="btn btn-outline-primary"
-              onclick="runMyCode()"
-              type="button"
-            >
-              Run Code
-            </button>
-            <button
-              class="btn btn-outline-success"
-              onclick="nextPage()"
-              type="button"
-            >
-              Next
-            </button>
-          </div>
           <p>
             Select a theme:
             <select onchange="selectTheme()" id="select">
@@ -140,6 +116,30 @@
             </select>
           </p>
           <div name="myEditor" id="editor"></div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-between driverButton">
+              <button
+                class="btn btn-outline-success"
+                onclick="prevPage()"
+                type="button"
+              >
+                Previous
+              </button>
+              <button
+                class="btn btn-outline-primary"
+                onclick="runMyCode()"
+                type="button"
+              >
+                Run Code
+              </button>
+              <button
+                class="btn btn-outline-success"
+                onclick="nextPage()"
+                type="button"
+              >
+                Next
+              </button>
+            </div>
         </div>
       </div>
     </div>
