@@ -106,12 +106,11 @@ myCodeMirror = CodeMirror(document.getElementById("editor"), {
   lineNumbers: true,
   lineWrapping: true,
   firstLineNumber: 0,
-  viewportMargin: Infinity,
   value: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
   mode: "javascript",
 });
 
-myCodeMirror.setSize("100%", "100%");
+myCodeMirror.setSize("100%", "350px");
 
 let input = document.getElementById("select");
 
