@@ -4,12 +4,14 @@ let myTestcase;
 let questions;
 let editor;
 let myCodeMirror;
+
 const getQuestions = async () => {
   let URL =
     "https://raw.githubusercontent.com/PugazharasanC/new-Automation/master/questions/questions.json";
   let fetchData = await fetch(URL);
   questions = await fetchData.json();
-};
+}
+
 let feedTopic = () => {
   let myDropdown = document.getElementById("topics");
   let topicsArray = Object.keys(questions);
@@ -25,7 +27,8 @@ let feedTopic = () => {
     };
     myDropdown.appendChild(newOption);
   });
-};
+}
+
 let addTestCase = (testcase) => {
   myTestcase = testcase;
   let testcaseDiv = document.getElementById("testcase");
@@ -37,7 +40,8 @@ let addTestCase = (testcase) => {
     newDiv.id = "test" + ind;
     testcaseDiv.appendChild(newDiv);
   });
-};
+}
+
 let feedQuestion = () => {
   if (questions[curTopic].length != 0) {
     let myQuestion = questions[curTopic][topics[curTopic].pageNum];
@@ -45,19 +49,22 @@ let feedQuestion = () => {
     myCodeMirror.setValue(myQuestion.template);
     addTestCase(myQuestion.output);
   }
-};
+}
+
 let displayInfo = () => {
   let infoElements = document.getElementsByClassName("info");
   for (let element of infoElements) {
     element.style.display = "inline";
   }
-};
+}
+
 let hideInfo = () => {
   let infoElements = document.getElementsByClassName("info");
   for (let element of infoElements) {
     element.style.display = "none";
   }
-};
+}
+
 let nextPage = () => {
   if (
     curTopic !== "" &&
@@ -68,7 +75,7 @@ let nextPage = () => {
   } else {
     alert("Last Question");
   }
-};
+}
 
 let prevPage = () => {
   if (curTopic !== "" && topics[curTopic].pageNum !== 0) {
@@ -78,6 +85,7 @@ let prevPage = () => {
     alert("First Question");
   }
 };
+
 let setTopic = (topic) => {
   curTopic = topic;
   if (topic !== "") {
@@ -88,10 +96,12 @@ let setTopic = (topic) => {
     myCodeMirror.setValue("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
   }
 };
+
 window.onload = async () => {
   await getQuestions();
   feedTopic();
 };
+
 myCodeMirror = CodeMirror(document.getElementById("editor"), {
   lineNumbers: true,
   lineWrapping: true,
@@ -100,8 +110,11 @@ myCodeMirror = CodeMirror(document.getElementById("editor"), {
   value: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
   mode: "javascript",
 });
+
 myCodeMirror.setSize("100%", "100%");
+
 let input = document.getElementById("select");
+
 function selectTheme() {
   let theme = input.options[input.selectedIndex].textContent;
   if (theme !== "default" && document.getElementById("id" + theme) === null) {
@@ -143,7 +156,8 @@ let runMyCode = () => {
   runScript.appendChild(newScript);
 };
 console.log = (value) => {
-  defaultLog(value);
+ // defaultLog(value);
+    value.replace("document.write","");
   if (myTestcase[currTestcase] === value) {
     count++;
     document.getElementById("test" + currTestcase).className = "p-2 bd-highlight pass";
