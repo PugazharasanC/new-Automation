@@ -27,7 +27,8 @@ let feedTopic = async() => {
     };
     myDropdown.appendChild(newOption);
   });
-  myDropdown.firstChild().selected = true;
+  myDropdown.firstElementChild.selectedIndex = 0;
+  myDropdown.firstElementChild.selected = true;
 }
 
 let addTestCase = (testcase) => {
