@@ -171,6 +171,6 @@ console.log = (value) => {
   }
   currTestcase++;
   if (count === myTestcase.length) {
-    alert("All Test Cases Passed");
+    $('#exampleModalCenter').modal('show')
   }
 };
