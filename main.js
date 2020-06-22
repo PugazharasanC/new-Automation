@@ -27,6 +27,7 @@ let feedTopic = () => {
     };
     myDropdown.appendChild(newOption);
   });
+  myDropdown.firstChild().selectedIndex = 0;
 }
 
 let addTestCase = (testcase) => {
