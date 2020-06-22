@@ -28,6 +28,7 @@ let feedTopic = () => {
     myDropdown.appendChild(newOption);
   });
   myDropdown.firstChild().selectedIndex = 0;
+  setTopic(topicsArray[0]);
 }
 
 let addTestCase = (testcase) => {
