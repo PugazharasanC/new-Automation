@@ -103,6 +103,8 @@ window.onload = async () => {
 };
 
 myCodeMirror = CodeMirror(document.getElementById("editor"), {
+  
+ 
   lineNumbers: true,
   lineWrapping: true,
   firstLineNumber: 0,
@@ -151,12 +153,13 @@ let runMyCode = () => {
   let runScript = document.getElementById("runScript");
   runScript.innerHTML = "";
   let newScript = document.createElement("script");
-  newScript.innerHTML = myCodeMirror.getValue();
+  let myCode = myCodeMirror.getValue();
+  myCode = myCode.replace(/document.write/g,"defaultLog");
+  newScript.innerHTML = myCode;
   runScript.appendChild(newScript);
 };
 console.log = (value) => {
  // defaultLog(value);
-    value.replace("document.write","");
   if (myTestcase[currTestcase] === value) {
     count++;
     document.getElementById("test" + currTestcase).className = "p-2 bd-highlight pass";
