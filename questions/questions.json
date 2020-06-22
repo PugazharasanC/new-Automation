@@ -35,5 +35,12 @@
             "solved": false
         }
     ],
-    "dummy" : []
+    "dummy" : [
+        {
+            "id": 5,
+            "problem": "Create a function that takes a number as an argument, increments the number by +1 and returns the result.",
+            "template": "function nextNumber(myint) {\n  ///Your code Starts here \n\n\n\n\n\n///Your code Ends here\n}\n\nconsole.log(nextNumber(0));\nconsole.log(nextNumber(9));\nconsole.log(nextNumber(-3));",
+            "output": [1, 10, -2],
+            "solved": false
+        }]
 }

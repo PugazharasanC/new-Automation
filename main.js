@@ -23,7 +23,7 @@ let feedTopic = () => {
     topics[val] = {
       name: val,
       pageNum: 0,
-      noOfQuestions: questions[val].length,
+      noOfQuestions: questions[val].length
     };
     myDropdown.appendChild(newOption);
   });
