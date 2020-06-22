@@ -5,7 +5,7 @@
 body {
     background: url("../img/bgimage.png");
     background-repeat: no-repeat;
-    background-size: inherit;
+    background-size: cover;
     background-position: inherit;
 }
 .pass {
