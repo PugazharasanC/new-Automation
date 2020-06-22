@@ -102,8 +102,6 @@ let setTopic = (topic) => {
 window.onload = async () => {
   await getQuestions();
   feedTopic();
-  setTopic(topicsArray[0]);
-  alert(curTopic);
 };
 
 myCodeMirror = CodeMirror(document.getElementById("editor"), {
