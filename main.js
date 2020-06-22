@@ -29,9 +29,7 @@ let feedTopic = async() => {
   });
   myDropdown.firstElementChild.selectedIndex = 0;
   myDropdown.firstElementChild.selected = true;
-  
   setTopic(topicsArray[0]);
-  alert(curTopic);
 }
 
 let addTestCase = (testcase) => {
