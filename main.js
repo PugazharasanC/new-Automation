@@ -28,8 +28,6 @@ let feedTopic = async() => {
     myDropdown.appendChild(newOption);
   });
   myDropdown.firstChild().selected = true;
-  setTopic(topicsArray[0]);
-  alert(curTopic);
 }
 
 let addTestCase = (testcase) => {
@@ -103,6 +101,8 @@ let setTopic = (topic) => {
 window.onload = async () => {
   await getQuestions();
   feedTopic();
+  setTopic(topicsArray[0]);
+  alert(curTopic);
 };
 
 myCodeMirror = CodeMirror(document.getElementById("editor"), {
