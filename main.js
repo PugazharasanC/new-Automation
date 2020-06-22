@@ -12,7 +12,7 @@ const getQuestions = async () => {
   questions = await fetchData.json();
 }
 
-let feedTopic = () => {
+let feedTopic = async() => {
   let myDropdown = document.getElementById("topics");
   let topicsArray = Object.keys(questions);
   topicsArray.forEach((val) => {
@@ -27,8 +27,9 @@ let feedTopic = () => {
     };
     myDropdown.appendChild(newOption);
   });
-  myDropdown.firstChild().selectedIndex = 0;
+  myDropdown.firstChild().selected = true;
   setTopic(topicsArray[0]);
+  alert(curTopic);
 }
 
 let addTestCase = (testcase) => {
