@@ -12,47 +12,53 @@
   <title>Zen</title>
 </head>
 
-<body >
+<body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand"><img data-src="images/guvi-logo.png" class="lazyloaded" alt="GUVI : Learn to code in your native language" src="images/guvi-logo.png"></a>
+    <a class="navbar-brand"><img data-src="images/guvi-logo.png" class="lazyloaded"
+        alt="GUVI : Learn to code in your native language" src="images/guvi-logo.png"></a>
 
     <div class="dropdown">
       <select name="topics" id="topics" class="dropdown" onchange="setTopic(this.value)">
       </select>
     </div>
   </nav>
-  <div class="container" id="mainDiv">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="info">
-          <h2>Problem Statement:</h2>
-          <div id="question"></div>
-        </div>
-        <div class="info">
-          <h2>Expected Outputs:</h2>
-          <div id="testcase" class="d-flex flex-column bd-highlight mb-3"></div>
-        </div>
-      </div>
+  <div id="mainDiv">
+    <div class="layer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            
+            <div class="info">
+              <h2>Problem Statement:</h2>
+              <div id="question"></div>
+            </div>
+            <div class="info">
+              <h2>Expected Outputs:</h2>
+              <div id="testcase" class="d-flex flex-column bd-highlight mb-3"></div>
+            </div>
+          </div>
 
-      <div class="col-md-6">
-        <p>
-          Select a theme:
-          <select onchange="selectTheme()" id="select">
-            <option selected>default</option>
-            <option>darcula</option>
-          </select>
-        </p>
-        <div name="myEditor" id="editor"></div>
-        <div class="d-flex justify-content-between driverButton">
-          <button class="btn btn-outline-success" onclick="prevPage()" type="button">
-            Previous
-          </button>
-          <button class="btn btn-outline-primary" onclick="runMyCode()" type="button">
-            Run Code
-          </button>
-          <button class="btn btn-outline-success" onclick="nextPage()" type="button">
-            Next
-          </button>
+          <div class="col-md-6">
+            <p>
+              Select a theme:
+              <select onchange="selectTheme()" id="select">
+                <option selected>default</option>
+                <option>darcula</option>
+              </select>
+            </p>
+            <div name="myEditor" id="editor"></div>
+            <div class="d-flex justify-content-between driverButton">
+              <button class="btn btn-outline-success" onclick="prevPage()" type="button">
+                Previous
+              </button>
+              <button class="btn btn-outline-primary" onclick="runMyCode()" type="button">
+                Run Code
+              </button>
+              <button class="btn btn-outline-success" onclick="nextPage()" type="button">
+                Next
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
